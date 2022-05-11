@@ -4,23 +4,28 @@
   - How many total locators we have?
   - Selenium has total of 8 locators.
 
-  - id   => driver.FindElement(By.id("attributeValue")
-  - name  => driver.FindElement(By.name("attributeValue")
-  - className
-  - linkText
-  - partialLinkText
-  - tagName
+1 - id   => driver.FindElement(By.id("attributeValue")
+2  - name  => driver.FindElement(By.name("attributeValue")
+3 - className
+4  - linkText
+5 - partialLinkText
+6  - tagName
 
- cssSelector
-
+ 7-cssSelector
     => tagName[attributeName= 'attributeValue']
-
+    => driver.findElement(By.cssSelector("tagName[attributeName= 'attributeValue']")
     => div[for = 'randomv12']
     => div[name ='forget_email']
-                    ==> div.forget_email  same as above using tagName.classValue
+               ==> div.forget_email  same as above using tagName.classValue
     => div[id='kg13']
-                    ==> div#kg13  => same as above using tagName#idValue
+                ==> div#kg13  => same as above using tagName#idValue
 
- xPath
+ 8- xPath
     => //tagName[@attribute='value']
+    => driver.findElement(By.xpath("//tagName[@attribute='value']")
+    => driver.findElement(By.xpath("//div[@for = 'randomv12']")
+    => driver.findElement(By.xpath("//div[@id='kg13']")
+
+
+
 
