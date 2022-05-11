@@ -11,6 +11,7 @@ public class Main {
     public static void main(String[] args) {
         //TC #1: Search items from etsy.com
         //1- Open a chrome browser
+
         WebDriver driver = WebDriverFactory.getDriver("chrome");
 
         driver.manage().window().maximize();
@@ -21,15 +22,18 @@ public class Main {
 
         // 3- Search items
         // only for one item
-        SearchEtsy.searchItem(driver, "Pillow");
+        //SearchEtsy.searchItem(driver, "Pillow");
         // print title
-        System.out.println(driver.getTitle());
+        //System.out.println(driver.getTitle());
+
+
         // go back to search again
-        driver.navigate().back();
+        //driver.navigate().back();
 
         // list of items
+
         ArrayList<String> itemList = new ArrayList<>();
-        itemList.addAll(Arrays.asList("table", "chair"));
+        itemList.addAll(Arrays.asList("Handbag", "Candles", "Toys", "Containers", "ring", "cake", "decorations", "necklace"));
 
         for (String item : itemList) {
             SearchEtsy.searchItem(driver, item);
@@ -39,6 +43,8 @@ public class Main {
 
             // go back to search again
             driver.navigate().back();
+
+
         }
 
 
